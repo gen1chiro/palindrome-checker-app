@@ -1,0 +1,97 @@
+:root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+    :root { font-family: InterVariable, sans-serif; }
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 80%;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: #304352;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #d7d2cc, #304352);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1em;
+    padding: 30px;
+    padding-bottom: 0px;
+}
+.header {
+    font-size: 2em;
+    color: white;
+}
+.input-container {
+    width: 60vw;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    row-gap: 1em;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.definition-container {
+    width: 60vw;
+    max-width: 400px;
+    border-radius: 16px;
+    background: white;
+    padding: 20px;
+    text-align: justify;
+}
+.hidden {
+    display: none;
+}
+#result {
+    padding: 0 20px;
+    font-size: 1.5em;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+#check-btn {
+    width: 60px;
+    border: none;
+    padding: 5px;
+    border-radius: 20px;
+    transition: ease 50ms;
+}
+#check-btn:hover {
+    color: white;
+    background: black;
+}
+#text-input {
+    padding: 7px;
+    border-radius: 10px;
+    font-size: 16px;
+    background: #fbfbfb;
+    border: 2px solid transparent;
+    height: 25px;
+    :focus{
+        border: 2px solid #000;
+        border-radius: 8px;
+    }
+}
